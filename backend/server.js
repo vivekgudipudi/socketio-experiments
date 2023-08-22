@@ -11,7 +11,8 @@ const io = require("socket.io")(server, {
       },
   cors: {
     origin: ["http://192.168.53.60:3000","*","http://localhost:3000","https://chat-socketio-nine.vercel.app/"],
-    credentials: true,
+    // credentials: true,
+    extraHeaders: "Access-Control-Allow-Origin"
     // methods: ["GET", "POST"],
     // allowedHeaders: "Access-Control-Allow-Origin"
   },
