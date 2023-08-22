@@ -10,7 +10,7 @@ const io = require("socket.io")(server, {
         callback(null, true); // only allow requests without 'origin' header
       },
   cors: {
-    origin: ["http://192.168.53.60:3000","*","http://localhost:3000"],
+    origin: ["http://192.168.53.60:3000","*","http://localhost:3000","https://chat-socketio-nine.vercel.app/"],
     credentials: true,
     // methods: ["GET", "POST"],
     // allowedHeaders: "Access-Control-Allow-Origin"
