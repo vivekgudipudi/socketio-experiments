@@ -6,7 +6,7 @@ const io = require("socket.io")(server, {
     allowRequest: (req, callback) => {
 
         const noOriginHeader = req.headers.origin === undefined;
-        console.log(req.headers.origin)
+        console.log("req origin",req.headers.origin)
         callback(null, true); // only allow requests without 'origin' header
       },
   cors: {
