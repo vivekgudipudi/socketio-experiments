@@ -4,7 +4,7 @@ const server = require("http").createServer(app);
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: "*"
+    origin: "http://localhost:3000/",
   },
 });
 
@@ -16,5 +16,5 @@ io.on("connection", (socket) => {
     io.emit("chat", payload);
   });
 });
-const port = process.env.BACKEND_PORT
+const port = process.env.BACKEND_PORT || 7000
 server.listen(port, () => console.log(`server is listening at port ${port}...`));
